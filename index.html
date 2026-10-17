@@ -10,7 +10,7 @@
 <meta property="og:title" content="云南咖啡 · ynkf.net">
 <meta property="og:description" content="从北纬 21° 的高原，到杯中的一抹果酸。一座关于云南咖啡产区、品种、工艺与品牌的静态百科站。">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#3e2415">
+<meta name="theme-color" content="#fffaf3">
 <link rel="stylesheet" href="assets/css/main.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><circle cx='20' cy='20' r='19' fill='%23c8452e'/><path d='M20 9c5.2 3 8 7.6 8 11s-2.8 8-8 11c-5.2-3-8-7.6-8-11s2.8-8 8-11z' fill='%23fbf6ef'/></svg>">
 </head>
@@ -33,27 +33,30 @@
     </a>
 
     <nav class="nav__links" aria-label="主导航">
-      <a class="nav__link" data-nav="home,guide" href="#home">首页</a>
-      <a class="nav__link" data-nav="terroir" href="#terroir">产区与风土</a>
-      <a class="nav__link" data-nav="varieties,process" href="#varieties">品种与加工</a>
-      <a class="nav__link" data-nav="brands" href="#brands">品牌馆</a>
-      <a class="nav__link" data-nav="culture" href="#culture">咖啡文化</a>
-      <a class="nav__link" data-nav="about" href="#about">关于</a>
+      <a class="nav__link" data-nav="home,guide" href="#home" data-en="Home">首页</a>
+      <a class="nav__link" data-nav="terroir" href="#terroir" data-en="Terroir">产区与风土</a>
+      <a class="nav__link" data-nav="varieties,process" href="#varieties" data-en="Varieties &amp; Processing">品种与加工</a>
+      <a class="nav__link" data-nav="brands" href="#brands" data-en="Brands">品牌馆</a>
+      <a class="nav__link" data-nav="culture" href="#culture" data-en="Culture">咖啡文化</a>
+      <a class="nav__link" data-nav="about" href="#about" data-en="About">关于</a>
     </nav>
 
-    <a class="btn btn--primary nav__cta" href="#brands">逛品牌馆</a>
+    <a class="btn btn--primary nav__cta" href="#brands" data-en="Explore Brands">逛品牌馆</a>
+
+    <button class="lang-toggle" type="button" aria-label="Switch to English">EN</button>
 
     <button class="nav__burger" type="button" aria-label="打开菜单"><span></span><span></span><span></span></button>
   </div>
 </header>
 
 <div class="drawer" id="drawer">
-  <a href="#home">首页</a>
-  <a href="#terroir">产区与风土</a>
-  <a href="#varieties">品种与加工</a>
-  <a href="#brands">品牌馆</a>
-  <a href="#culture">咖啡文化</a>
-  <a href="#about">关于</a>
+  <a href="#home" data-en="Home">首页</a>
+  <a href="#terroir" data-en="Terroir">产区与风土</a>
+  <a href="#varieties" data-en="Varieties &amp; Processing">品种与加工</a>
+  <a href="#brands" data-en="Brands">品牌馆</a>
+  <a href="#culture" data-en="Culture">咖啡文化</a>
+  <a href="#about" data-en="About">关于</a>
+  <button class="lang-toggle lang-toggle--drawer" type="button" aria-label="Switch to English">EN</button>
 </div>
 
 <!-- ============ 主视觉 ============ -->
@@ -62,63 +65,63 @@
     <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
       <defs>
         <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#3d2113"/>
-          <stop offset=".38" stop-color="#7a4527"/>
-          <stop offset=".74" stop-color="#bc7a45"/>
-          <stop offset="1" stop-color="#dca063"/>
+          <stop offset="0" stop-color="#fff6e8"/>
+          <stop offset=".4" stop-color="#ffe7c9"/>
+          <stop offset=".74" stop-color="#ffd9b0"/>
+          <stop offset="1" stop-color="#ffe9d2"/>
         </linearGradient>
         <radialGradient id="sunglow" cx=".5" cy=".5" r=".5">
-          <stop offset="0" stop-color="#ffe2b4" stop-opacity=".95"/>
-          <stop offset=".42" stop-color="#ffbe74" stop-opacity=".34"/>
-          <stop offset="1" stop-color="#ffbe74" stop-opacity="0"/>
+          <stop offset="0" stop-color="#fff3c4" stop-opacity=".95"/>
+          <stop offset=".42" stop-color="#ffd66b" stop-opacity=".42"/>
+          <stop offset="1" stop-color="#ffd66b" stop-opacity="0"/>
         </radialGradient>
         <linearGradient id="mist" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0" stop-color="#ffe9cf" stop-opacity="0"/>
-          <stop offset=".5" stop-color="#ffe9cf" stop-opacity=".5"/>
-          <stop offset="1" stop-color="#ffe9cf" stop-opacity="0"/>
+          <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+          <stop offset=".5" stop-color="#ffffff" stop-opacity=".6"/>
+          <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
         </linearGradient>
         <linearGradient id="leafg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#5f8f4e"/>
-          <stop offset="1" stop-color="#33593a"/>
+          <stop offset="0" stop-color="#86c97f"/>
+          <stop offset="1" stop-color="#3f9a5a"/>
         </linearGradient>
       </defs>
 
       <rect width="1600" height="900" fill="url(#sky)"/>
 
       <circle cx="1235" cy="238" r="250" fill="url(#sunglow)"/>
-      <circle cx="1235" cy="238" r="58" fill="#ffe6bd" opacity=".92"/>
+      <circle cx="1235" cy="238" r="62" fill="#ffd56b" opacity=".96"/>
 
-      <g stroke="#fff3e2" stroke-width="2.2" fill="none" opacity=".5" stroke-linecap="round">
+      <g stroke="#d79a55" stroke-width="2.2" fill="none" opacity=".45" stroke-linecap="round">
         <path d="M980 188q12-11 24 0 q12-11 24 0"/>
         <path d="M1062 232q9-8 18 0 q9-8 18 0"/>
         <path d="M930 258q7-6 14 0 q7-6 14 0"/>
       </g>
 
-      <path d="M0 452 Q210 382 356 436 T712 418 T1078 456 T1600 404 L1600 900 L0 900 Z" fill="#8d5734" opacity=".55"/>
-      <path d="M0 512 Q180 470 340 500 T690 494 T1050 522 T1600 496 L1600 900 L0 900 Z" fill="#6d4026" opacity=".7"/>
+      <path d="M0 452 Q210 392 356 446 T712 428 T1078 466 T1600 414 L1600 900 L0 900 Z" fill="#ffd9b0" opacity=".7"/>
+      <path d="M0 512 Q180 478 340 508 T690 502 T1050 528 T1600 504 L1600 900 L0 900 Z" fill="#bfe0ab" opacity=".85"/>
 
-      <rect x="0" y="520" width="1600" height="26" fill="url(#mist)" opacity=".55"/>
-      <rect x="0" y="600" width="1600" height="20" fill="url(#mist)" opacity=".4"/>
+      <rect x="0" y="520" width="1600" height="26" fill="url(#mist)"/>
+      <rect x="0" y="600" width="1600" height="20" fill="url(#mist)" opacity=".7"/>
 
-      <path d="M0 588 Q280 528 560 586 T1090 574 T1600 604 L1600 900 L0 900 Z" fill="#553119"/>
-      <g stroke="#e6bc80" stroke-width="2.2" fill="none" opacity=".26" stroke-linecap="round">
-        <path d="M0 622 Q300 578 620 626 T1600 636"/>
-        <path d="M0 664 Q300 622 620 668 T1600 678"/>
-        <path d="M0 706 Q300 666 620 710 T1600 720"/>
-        <path d="M0 748 Q300 710 620 752 T1600 762"/>
+      <path d="M0 588 Q280 536 560 590 T1090 580 T1600 606 L1600 900 L0 900 Z" fill="#7cc47f"/>
+      <g stroke="#ffffff" stroke-width="2.2" fill="none" opacity=".3" stroke-linecap="round">
+        <path d="M0 622 Q300 584 620 628 T1600 636"/>
+        <path d="M0 664 Q300 628 620 670 T1600 678"/>
+        <path d="M0 706 Q300 672 620 712 T1600 720"/>
+        <path d="M0 748 Q300 716 620 754 T1600 762"/>
       </g>
 
-      <path d="M0 800 Q300 742 640 800 T1600 806 L1600 900 L0 900 Z" fill="#331d10"/>
-      <g stroke="#c9954f" stroke-width="2" fill="none" opacity=".2">
-        <path d="M0 830 Q320 782 660 832 T1600 840"/>
-        <path d="M0 864 Q320 820 660 866 T1600 872"/>
+      <path d="M0 800 Q300 750 640 804 T1600 808 L1600 900 L0 900 Z" fill="#3f9a5a"/>
+      <g stroke="#2f7d47" stroke-width="2" fill="none" opacity=".3">
+        <path d="M0 830 Q320 790 660 834 T1600 840"/>
+        <path d="M0 864 Q320 826 660 866 T1600 872"/>
       </g>
 
-      <g opacity=".85">
-        <rect x="1180" y="742" width="330" height="16" rx="8" fill="#1f1109"/>
-        <rect x="1196" y="758" width="12" height="52" fill="#1f1109"/>
-        <rect x="1482" y="758" width="12" height="52" fill="#1f1109"/>
-        <g fill="#c8452e">
+      <g opacity=".9">
+        <rect x="1180" y="742" width="330" height="16" rx="8" fill="#5b3520"/>
+        <rect x="1196" y="758" width="12" height="52" fill="#5b3520"/>
+        <rect x="1482" y="758" width="12" height="52" fill="#5b3520"/>
+        <g fill="#ec5a3c">
           <circle cx="1214" cy="736" r="4"/><circle cx="1246" cy="734" r="4"/><circle cx="1278" cy="737" r="4"/>
           <circle cx="1310" cy="734" r="4"/><circle cx="1342" cy="737" r="4"/><circle cx="1374" cy="734" r="4"/>
           <circle cx="1406" cy="737" r="4"/><circle cx="1438" cy="734" r="4"/><circle cx="1470" cy="737" r="4"/>
@@ -126,9 +129,9 @@
       </g>
 
       <g>
-        <path d="M-10 60 Q120 92 210 168" stroke="#2c1a0f" stroke-width="7" fill="none" stroke-linecap="round"/>
-        <path d="M96 84 Q128 60 152 44" stroke="#2c1a0f" stroke-width="4.5" fill="none" stroke-linecap="round"/>
-        <path d="M158 124 Q192 116 218 122" stroke="#2c1a0f" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M-10 60 Q120 92 210 168" stroke="#5b3520" stroke-width="7" fill="none" stroke-linecap="round"/>
+        <path d="M96 84 Q128 60 152 44" stroke="#5b3520" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+        <path d="M158 124 Q192 116 218 122" stroke="#5b3520" stroke-width="4" fill="none" stroke-linecap="round"/>
         <g fill="url(#leafg)">
           <path d="M152 44 Q188 26 214 40 Q186 70 152 44 Z"/>
           <path d="M140 62 Q176 48 196 66 Q164 90 140 62 Z" opacity=".9"/>
@@ -136,14 +139,14 @@
           <path d="M196 138 Q228 132 244 150 Q214 166 196 138 Z" opacity=".9"/>
         </g>
         <g>
-          <circle cx="120" cy="106" r="15" fill="#c8452e"/>
-          <circle cx="115" cy="101" r="4.5" fill="#f0927c" opacity=".8"/>
-          <circle cx="168" cy="150" r="13" fill="#a8382a"/>
-          <circle cx="164" cy="145" r="4" fill="#e0806a" opacity=".75"/>
-          <circle cx="70" cy="82" r="11" fill="#c8452e"/>
-          <circle cx="66" cy="78" r="3.4" fill="#f0927c" opacity=".8"/>
-          <circle cx="184" cy="176" r="12" fill="#b23a26"/>
-          <circle cx="180" cy="171" r="3.6" fill="#e0806a" opacity=".7"/>
+          <circle cx="120" cy="106" r="15" fill="#ec5a3c"/>
+          <circle cx="115" cy="101" r="4.5" fill="#ff8d6f" opacity=".85"/>
+          <circle cx="168" cy="150" r="13" fill="#d8442a"/>
+          <circle cx="164" cy="145" r="4" fill="#ff8d6f" opacity=".8"/>
+          <circle cx="70" cy="82" r="11" fill="#ec5a3c"/>
+          <circle cx="66" cy="78" r="3.4" fill="#ff8d6f" opacity=".85"/>
+          <circle cx="184" cy="176" r="12" fill="#d8442a"/>
+          <circle cx="180" cy="171" r="3.6" fill="#ff8d6f" opacity=".75"/>
         </g>
       </g>
     </svg>
@@ -152,9 +155,9 @@
   <div class="hero__scrim" aria-hidden="true"></div>
 
   <div class="hero__body">
-    <span class="hero__badge"><i></i>YUNNAN · 北纬 21°—24° 咖啡带</span>
-    <h1 class="hero__title">云南咖啡<br><em>高原上的红果与酸质</em></h1>
-    <p class="hero__tagline">从北纬 21° 的高原，到杯中的一抹果酸</p>
+    <span class="hero__badge" data-en="YUNNAN · Coffee Belt 21°–24° N"><i></i>YUNNAN · 北纬 21°—24° 咖啡带</span>
+    <h1 class="hero__title" data-en-html="Yunnan Coffee<br><em>Red Cherries &amp; Acidity from the Highlands</em>">云南咖啡<br><em>高原上的红果与酸质</em></h1>
+    <p class="hero__tagline" data-en="From the highlands at 21° N to a sip of acidity in your cup">从北纬 21° 的高原，到杯中的一抹果酸</p>
   </div>
 
   <div class="hero__scroll" aria-hidden="true"><span>SCROLL</span><i></i></div>
@@ -163,24 +166,24 @@
 <!-- ============ 核心数据条 ============ -->
 <section class="section stats" style="padding:0">
   <div class="wrap" style="padding-block:0">
-    <div class="stats__grid" style="margin-top:-46px;position:relative;z-index:5;box-shadow:var(--shadow-l)">
-      <div class="stat">
-        <div class="stat__num"><span data-count="150">0</span><small>万亩</small></div>
-        <div class="stat__label">种植面积（约）</div>
+      <div class="stats__grid" style="margin-top:-46px;position:relative;z-index:5;box-shadow:var(--shadow-l)">
+        <div class="stat">
+          <div class="stat__num"><span data-count="150">0</span><small data-en="10k mu">万亩</small></div>
+          <div class="stat__label" data-en="Planting area (approx.)">种植面积（约）</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num"><span data-count="98">0</span><small data-en="%+">%+</small></div>
+          <div class="stat__label" data-en="Share of national output">年产量占全国比重</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num"><span data-count="4">0</span><small data-en="regions">个</small></div>
+          <div class="stat__label" data-en="Core regions">核心产区</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num"><span data-count="5">0</span><small data-en="varieties">类</small></div>
+          <div class="stat__label" data-en="Main cultivars">主要栽培品种</div>
+        </div>
       </div>
-      <div class="stat">
-        <div class="stat__num"><span data-count="98">0</span><small>%+</small></div>
-        <div class="stat__label">年产量占全国比重</div>
-      </div>
-      <div class="stat">
-        <div class="stat__num"><span data-count="4">0</span><small>个</small></div>
-        <div class="stat__label">核心产区</div>
-      </div>
-      <div class="stat">
-        <div class="stat__num"><span data-count="5">0</span><small>类</small></div>
-        <div class="stat__label">主要栽培品种</div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -189,11 +192,11 @@
   <div class="wrap">
     <div class="section__head section__head--center reveal">
       <span class="eyebrow">Explore</span>
-      <h2 class="section__title">从产区到杯中</h2>
-      <p class="section__lead">地理决定风味，品种决定骨架，工艺决定性格，品牌决定它被谁喝到，而文化决定它如何被讲述。往下滚动，或点开任意一块。</p>
+      <h2 class="section__title" data-en="From Origin to Cup">从产区到杯中</h2>
+      <p class="section__lead" data-en="Geography decides flavor, variety sets the skeleton, processing shapes the character, brands decide who drinks it, and culture decides how it is told. Scroll down, or open any block.">地理决定风味，品种决定骨架，工艺决定性格，品牌决定它被谁喝到，而文化决定它如何被讲述。往下滚动，或点开任意一块。</p>
     </div>
 
-    <div class="grid grid--4">
+      <div class="grid grid--4">
       <a class="entry reveal" href="#terroir" style="--tint:rgba(200,69,46,.09)">
         <svg class="entry__icon" viewBox="0 0 56 56" fill="none" aria-hidden="true">
           <rect x="8" y="10" width="40" height="36" rx="6" fill="#C8452E" opacity=".12"/>
@@ -201,9 +204,9 @@
           <circle cx="38" cy="18" r="4.5" fill="#C8452E"/>
           <path d="M8 42h40" stroke="#C8452E" stroke-width="2" stroke-linecap="round" opacity=".55"/>
         </svg>
-        <h3>产区与风土</h3>
-        <p>北纬 21° 的纬度、800—1800 米的海拔、红壤与昼夜温差，构成云南的底味。</p>
-        <span class="entry__go">进入产区 →</span>
+        <h3 data-en="Terroir">产区与风土</h3>
+        <p data-en="A latitude of 21° N, altitudes of 800–1800 m, red soil and day-night temperature swings form the base note of Yunnan.">北纬 21° 的纬度、800—1800 米的海拔、红壤与昼夜温差，构成云南的底味。</p>
+        <span class="entry__go" data-en="Enter terroir →">进入产区 →</span>
       </a>
 
       <a class="entry reveal" href="#varieties" style="--tint:rgba(62,122,85,.1);" data-delay="80">
@@ -215,9 +218,9 @@
           <circle cx="22" cy="38" r="3.4" fill="#C8452E"/>
           <circle cx="33" cy="39" r="2.8" fill="#C8452E" opacity=".7"/>
         </svg>
-        <h3>品种与加工</h3>
-        <p>卡蒂姆撑起产量，铁皮卡与波旁守住风味；水洗的干净、日晒的甜、蜜处理的层次，把品种潜力定型成杯中风味。</p>
-        <span class="entry__go">查看品种与工艺 →</span>
+        <h3 data-en="Varieties &amp; Processing">品种与加工</h3>
+        <p data-en="Catimor carries the yield, Typica and Bourbon guard the flavor; the clean wash, the sweet natural, and the layered honey process turn varietal potential into cup flavor.">卡蒂姆撑起产量，铁皮卡与波旁守住风味；水洗的干净、日晒的甜、蜜处理的层次，把品种潜力定型成杯中风味。</p>
+        <span class="entry__go" data-en="Varieties &amp; process →">查看品种与工艺 →</span>
       </a>
 
       <a class="entry reveal" href="#brands" style="--tint:rgba(107,66,38,.1)" data-delay="160">
@@ -227,9 +230,9 @@
           <rect x="31" y="16" width="10" height="22" rx="2.5" fill="#6B4226" opacity=".55"/>
           <path d="M15 30h10M31 26h10" stroke="#FBF6EF" stroke-width="1.8" stroke-linecap="round"/>
         </svg>
-        <h3>品牌馆</h3>
-        <p>从速溶冻干到烘焙豆与连锁门店，按形态收录 24 个云南相关咖啡品牌。</p>
-        <span class="entry__go">逛品牌馆 →</span>
+        <h3 data-en="Brands">品牌馆</h3>
+        <p data-en="From instant and freeze-dried to roasted beans and café chains — 24 Yunnan-related coffee brands, sorted by format.">从速溶冻干到烘焙豆与连锁门店，按形态收录 24 个云南相关咖啡品牌。</p>
+        <span class="entry__go" data-en="Browse brands →">逛品牌馆 →</span>
       </a>
 
       <a class="entry reveal" href="#culture" style="--tint:rgba(141,98,66,.12)" data-delay="240">
@@ -240,9 +243,9 @@
           <path d="M31 33l7 7" stroke="#8D6242" stroke-width="2.4" stroke-linecap="round"/>
           <path d="M18 40h22" stroke="#8D6242" stroke-width="2" stroke-linecap="round" opacity=".5"/>
         </svg>
-        <h3>咖啡文化</h3>
-        <p>各地咖啡节与产地旅游，看云南咖啡如何被重新讲述。</p>
-        <span class="entry__go">进入文化 →</span>
+        <h3 data-en="Culture">咖啡文化</h3>
+        <p data-en="Coffee festivals and origin tourism across the province — see how Yunnan coffee is being retold.">各地咖啡节与产地旅游，看云南咖啡如何被重新讲述。</p>
+        <span class="entry__go" data-en="Enter culture →">进入文化 →</span>
       </a>
     </div>
   </div>
@@ -253,16 +256,16 @@
   <div class="wrap">
     <div class="section__head section__head--center reveal">
       <span class="eyebrow">Seed to Cup</span>
-      <h2 class="section__title">一粒豆的云南旅程</h2>
-      <p class="section__lead">从 800 米到 1800 米的山坡，到一只 200 毫升的杯子，中间隔着整整一年。</p>
+      <h2 class="section__title" data-en="A Yunnan Bean's Journey">一粒豆的云南旅程</h2>
+      <p class="section__lead" data-en="From a hillside at 800 to 1800 m to a 200 ml cup — a full year in between.">从 800 米到 1800 米的山坡，到一只 200 毫升的杯子，中间隔着整整一年。</p>
     </div>
 
     <div class="grid grid--5 reveal">
-      <div class="mini"><div class="mini__k">01</div><div class="mini__t">种植</div><div class="mini__d">11 月—次年 3 月采收，山地红壤、干湿分明，昼夜温差累积糖分。</div></div>
-      <div class="mini"><div class="mini__k">02</div><div class="mini__t">采摘</div><div class="mini__d">手工分批采摘，全红果（全红）批次风味更集中、甜感更高。</div></div>
-      <div class="mini"><div class="mini__k">03</div><div class="mini__t">处理</div><div class="mini__d">水洗、日晒、蜜处理与厌氧等创新发酵，决定杯中的干净度与层次。</div></div>
-      <div class="mini"><div class="mini__k">04</div><div class="mini__t">烘焙</div><div class="mini__d">浅烘突出产地花果酸，中烘求平衡，深烘走向坚果与巧克力。</div></div>
-      <div class="mini"><div class="mini__k">05</div><div class="mini__t">冲煮</div><div class="mini__d">手冲、意式、冷萃或即溶，最后一步才是它真正被喝到的时刻。</div></div>
+      <div class="mini"><div class="mini__k">01</div><div class="mini__t" data-en="Growing">种植</div><div class="mini__d" data-en="Harvested Nov–Mar; red upland soil, distinct wet/dry seasons, day-night temperature swings build sugars.">11 月—次年 3 月采收，山地红壤、干湿分明，昼夜温差累积糖分。</div></div>
+      <div class="mini"><div class="mini__k">02</div><div class="mini__t" data-en="Picking">采摘</div><div class="mini__d" data-en="Hand-picked in batches; a fully red-cherry lot concentrates flavor and raises sweetness.">手工分批采摘，全红果（全红）批次风味更集中、甜感更高。</div></div>
+      <div class="mini"><div class="mini__k">03</div><div class="mini__t" data-en="Processing">处理</div><div class="mini__d" data-en="Washed, natural, honey and anaerobic ferments decide cup clarity and complexity.">水洗、日晒、蜜处理与厌氧等创新发酵，决定杯中的干净度与层次。</div></div>
+      <div class="mini"><div class="mini__k">04</div><div class="mini__t" data-en="Roasting">烘焙</div><div class="mini__d" data-en="Light roast highlights origin fruit acidity; medium seeks balance; dark turns to nuts and chocolate.">浅烘突出产地花果酸，中烘求平衡，深烘走向坚果与巧克力。</div></div>
+      <div class="mini"><div class="mini__k">05</div><div class="mini__t" data-en="Brewing">冲煮</div><div class="mini__d" data-en="Pour-over, espresso, cold brew or instant — the final step is when it is truly drunk.">手冲、意式、冷萃或即溶，最后一步才是它真正被喝到的时刻。</div></div>
     </div>
   </div>
 </section>
@@ -272,13 +275,13 @@
   <header class="chapter__head">
     <div class="wrap">
       <span class="chapter__no">01</span>
-      <h2 class="chapter__title">产区与风土</h2>
-      <p class="chapter__lead">同一颗种子，种在怒江峡谷与种在澜沧江畔，会变成两杯完全不同的咖啡。云南之所以能种咖啡，靠的不是运气，而是纬度、海拔、温差与红壤的合力。</p>
+      <h2 class="chapter__title" data-en="Terroir">产区与风土</h2>
+      <p class="chapter__lead" data-en="The same seed planted in the Nujiang canyon and by the Lancang River becomes two completely different cups. Yunnan grows coffee not by luck, but by the combined force of latitude, altitude, temperature swings and red soil.">同一颗种子，种在怒江峡谷与种在澜沧江畔，会变成两杯完全不同的咖啡。云南之所以能种咖啡，靠的不是运气，而是纬度、海拔、温差与红壤的合力。</p>
       <div class="chapter__meta">
-        <div><b>21°—24°</b>北纬咖啡带</div>
-        <div><b>800—1800</b>米海拔区间</div>
-        <div><b>4</b>个核心产区</div>
-        <div><b>红壤</b>为主土质</div>
+        <div data-en-html="<b>21&deg;&ndash;24&deg;</b> N Coffee Belt"><b>21°—24°</b>北纬咖啡带</div>
+        <div data-en-html="<b>800&ndash;1800</b> m Altitude"><b>800—1800</b>米海拔区间</div>
+        <div data-en-html="<b>4</b> Core regions"><b>4</b>个核心产区</div>
+        <div data-en-html="<b>Red soil</b> Dominant"><b>红壤</b>为主土质</div>
       </div>
     </div>
   </header>
@@ -286,36 +289,36 @@
   <div class="wrap">
     <div class="section__head reveal">
       <span class="eyebrow">Why Yunnan</span>
-      <h2 class="section__title">云南为什么能种咖啡</h2>
-      <p class="section__lead">阿拉比卡咖啡偏好「不高不低的纬度、足够高的海拔、干湿分明的季节」。云南的西南与南部山区，几乎踩中了所有条件。</p>
+      <h2 class="section__title" data-en="Why Yunnan Can Grow Coffee">云南为什么能种咖啡</h2>
+      <p class="section__lead" data-en="Arabica prefers 'a not-too-high latitude, a high enough altitude, and distinct wet/dry seasons.' Yunnan's southwest and southern mountains hit almost every condition.">阿拉比卡咖啡偏好「不高不低的纬度、足够高的海拔、干湿分明的季节」。云南的西南与南部山区，几乎踩中了所有条件。</p>
       <svg class="squiggle" viewBox="0 0 120 12" fill="none" aria-hidden="true"><path d="M2 8C14 2 26 10 38 5s24-7 36-1 24 6 42-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
     </div>
 
     <div class="grid grid--5">
       <div class="mini reveal">
         <div class="mini__k">21°—24<small>°N</small></div>
-        <div class="mini__t">纬度</div>
-        <div class="mini__d">处于全球阿拉比卡咖啡带（约南北纬 15°—24°）北缘，日照角度温和。</div>
+        <div class="mini__t" data-en="Latitude">纬度</div>
+        <div class="mini__d" data-en="On the northern edge of the global Arabica belt (about 15°–24° N/S), with gentle solar angles.">处于全球阿拉比卡咖啡带（约南北纬 15°—24°）北缘，日照角度温和。</div>
       </div>
       <div class="mini reveal" data-delay="70">
         <div class="mini__k">800—1800<small>m</small></div>
-        <div class="mini__t">海拔</div>
-        <div class="mini__d">高海拔延缓果实成熟，糖分与风味物质积累更充分，酸质更明亮。</div>
+        <div class="mini__t" data-en="Altitude">海拔</div>
+        <div class="mini__d" data-en="High altitude slows cherry maturation, letting sugars and flavor compounds build up for brighter acidity.">高海拔延缓果实成熟，糖分与风味物质积累更充分，酸质更明亮。</div>
       </div>
       <div class="mini reveal" data-delay="140">
         <div class="mini__k">10—15<small>℃</small></div>
-        <div class="mini__t">昼夜温差</div>
-        <div class="mini__d">干季白天升温、夜间骤降，白天光合、夜间锁糖，是甜感的关键。</div>
+        <div class="mini__t" data-en="Day-night swing">昼夜温差</div>
+        <div class="mini__d" data-en="In the dry season days warm and nights drop sharply — photosynthesis by day, sugar-locking by night: the key to sweetness.">干季白天升温、夜间骤降，白天光合、夜间锁糖，是甜感的关键。</div>
       </div>
       <div class="mini reveal" data-delay="210">
         <div class="mini__k">1000—1800<small>mm</small></div>
-        <div class="mini__t">年降雨量</div>
-        <div class="mini__d">降水集中在 5—10 月，11 月至次年 4 月的干季恰好用于采收与晾晒。</div>
+        <div class="mini__t" data-en="Rainfall">年降雨量</div>
+        <div class="mini__d" data-en="Rainfall concentrates in May–Oct; the dry Nov–Apr season is just right for harvesting and drying.">降水集中在 5—10 月，11 月至次年 4 月的干季恰好用于采收与晾晒。</div>
       </div>
       <div class="mini reveal" data-delay="280">
         <div class="mini__k">红壤</div>
-        <div class="mini__t">土质</div>
-        <div class="mini__d">以红壤、赤红壤为主，土层深厚、排水良好、富含有机质与矿物质。</div>
+        <div class="mini__t" data-en="Soil">土质</div>
+        <div class="mini__d" data-en="Mostly red and lateritic soils — deep, well-drained, rich in organic matter and minerals.">以红壤、赤红壤为主，土层深厚、排水良好、富含有机质与矿物质。</div>
       </div>
     </div>
   </div>
@@ -326,8 +329,8 @@
   <div class="wrap">
     <div class="section__head section__head--center reveal">
       <span class="eyebrow">The Map</span>
-      <h2 class="section__title">四个核心产区，一条弧形分布带</h2>
-      <p class="section__lead">沿怒江、澜沧江与元江河谷，从西北向东南，云南咖啡主产区串成一条弧线。点击地图上的点位，可跳转查看对应产区详情。</p>
+      <h2 class="section__title" data-en="Four Core Regions, One Arcing Belt">四个核心产区，一条弧形分布带</h2>
+      <p class="section__lead" data-en="Along the Nujiang, Lancang and Yuan river valleys, from northwest to southeast, Yunnan's coffee regions string into an arc. Click a point on the map to jump to that region.">沿怒江、澜沧江与元江河谷，从西北向东南，云南咖啡主产区串成一条弧线。点击地图上的点位，可跳转查看对应产区详情。</p>
     </div>
 
     <div class="mapwrap reveal" style="max-width:760px;margin-inline:auto">
@@ -354,47 +357,47 @@
           <path d="M 199.9 306.9 L 231.9 356.5 L 276.9 391.9 L 315.4 434.3 L 360.3 462.7 L 398.8 483.9 L 430.9 498.1"/>
         </g>
         <g fill="#5b86a3" font-size="10" font-weight="600" opacity=".9" stroke="#f6ead9" stroke-width="3" stroke-linejoin="round" paint-order="stroke">
-          <text x="88" y="424">怒江</text>
-          <text x="137" y="186">澜沧江</text>
-          <text x="388" y="478">元江</text>
+          <text x="88" y="424" data-en="Nujiang">怒江</text>
+          <text x="137" y="186" data-en="Lancang">澜沧江</text>
+          <text x="388" y="478" data-en="Yuan">元江</text>
         </g>
 
         <!-- 参照州市（非产区） -->
         <g fill="#a3937f" font-size="11" opacity=".95" stroke="#f6ead9" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">
-          <text x="362.2" y="329.5" text-anchor="middle">昆明</text>
-          <text x="197.9" y="278.6" text-anchor="middle">大理</text>
-          <text x="231.9" y="532.1" text-anchor="middle">西双版纳</text>
-          <text x="106.8" y="260.9" text-anchor="middle">怒江</text>
-          <text x="424.5" y="286.4" text-anchor="middle">曲靖</text>
-          <text x="344.2" y="367.1" text-anchor="middle">玉溪</text>
-          <text x="280.1" y="317.5" text-anchor="middle">楚雄</text>
-          <text x="333.3" y="436.5" text-anchor="middle">红河</text>
-          <text x="452.7" y="436.5" text-anchor="middle">文山</text>
-          <text x="419.3" y="155.4" text-anchor="middle">昭通</text>
-          <text x="195.4" y="189.3" text-anchor="middle">丽江</text>
-          <text x="161.3" y="120.7" text-anchor="middle">迪庆</text>
+          <text x="362.2" y="329.5" text-anchor="middle" data-en="Kunming">昆明</text>
+          <text x="197.9" y="278.6" text-anchor="middle" data-en="Dali">大理</text>
+          <text x="231.9" y="532.1" text-anchor="middle" data-en="Xishuangbanna">西双版纳</text>
+          <text x="106.8" y="260.9" text-anchor="middle" data-en="Nujiang">怒江</text>
+          <text x="424.5" y="286.4" text-anchor="middle" data-en="Qujing">曲靖</text>
+          <text x="344.2" y="367.1" text-anchor="middle" data-en="Yuxi">玉溪</text>
+          <text x="280.1" y="317.5" text-anchor="middle" data-en="Chuxiong">楚雄</text>
+          <text x="333.3" y="436.5" text-anchor="middle" data-en="Honghe">红河</text>
+          <text x="452.7" y="436.5" text-anchor="middle" data-en="Wenshan">文山</text>
+          <text x="419.3" y="155.4" text-anchor="middle" data-en="Zhaotong">昭通</text>
+          <text x="195.4" y="189.3" text-anchor="middle" data-en="Lijiang">丽江</text>
+          <text x="161.3" y="120.7" text-anchor="middle" data-en="Deqin">迪庆</text>
         </g>
 
         <!-- 咖啡产区（可点击跳转） -->
-        <g class="marker" data-region="dehong" tabindex="0" role="button" aria-label="德宏产区">
+        <g class="marker" data-region="dehong" tabindex="0" role="button" aria-label="德宏产区" data-en-aria="Dehong Region">
           <circle class="marker__pulse" cx="89.5" cy="360.0" r="11" fill="#c8452e" opacity=".4"/>
           <circle class="marker__dot" cx="89.5" cy="360.0" r="8.5" fill="#c8452e" stroke="#fff" stroke-width="2.5"/>
-          <text x="89.5" y="347.0" text-anchor="middle" font-size="15" font-weight="700" fill="#3e2415" stroke="#f6ead9" stroke-width="3" stroke-linejoin="round" paint-order="stroke">德宏</text>
+          <text x="89.5" y="347.0" text-anchor="middle" font-size="15" font-weight="700" fill="#3e2415" stroke="#f6ead9" stroke-width="3" stroke-linejoin="round" paint-order="stroke" data-en="Dehong">德宏</text>
         </g>
-        <g class="marker" data-region="baoshan" tabindex="0" role="button" aria-label="保山产区">
+        <g class="marker" data-region="baoshan" tabindex="0" role="button" aria-label="保山产区" data-en-aria="Baoshan Region">
           <circle class="marker__pulse" cx="126.0" cy="314.0" r="11" fill="#c8452e" opacity=".4"/>
           <circle class="marker__dot" cx="126.0" cy="314.0" r="8.5" fill="#c8452e" stroke="#fff" stroke-width="2.5"/>
-          <text x="126.0" y="301.0" text-anchor="middle" font-size="15" font-weight="700" fill="#3e2415" stroke="#f6ead9" stroke-width="3" stroke-linejoin="round" paint-order="stroke">保山</text>
+          <text x="126.0" y="301.0" text-anchor="middle" font-size="15" font-weight="700" fill="#3e2415" stroke="#f6ead9" stroke-width="3" stroke-linejoin="round" paint-order="stroke" data-en="Baoshan">保山</text>
         </g>
-        <g class="marker" data-region="lincang" tabindex="0" role="button" aria-label="临沧产区">
+        <g class="marker" data-region="lincang" tabindex="0" role="button" aria-label="临沧产区" data-en-aria="Lincang Region">
           <circle class="marker__pulse" cx="185.7" cy="400.4" r="11" fill="#3e7a55" opacity=".4"/>
           <circle class="marker__dot" cx="185.7" cy="400.4" r="8.5" fill="#3e7a55" stroke="#fff" stroke-width="2.5"/>
-          <text x="185.7" y="387.4" text-anchor="middle" font-size="15" font-weight="700" fill="#3e2415" stroke="#f6ead9" stroke-width="3" stroke-linejoin="round" paint-order="stroke">临沧</text>
+          <text x="185.7" y="387.4" text-anchor="middle" font-size="15" font-weight="700" fill="#3e2415" stroke="#f6ead9" stroke-width="3" stroke-linejoin="round" paint-order="stroke" data-en="Lincang">临沧</text>
         </g>
-        <g class="marker" data-region="puer" tabindex="0" role="button" aria-label="普洱产区">
+        <g class="marker" data-region="puer" tabindex="0" role="button" aria-label="普洱产区" data-en-aria="Puer Region">
           <circle class="marker__pulse" cx="242.8" cy="476.8" r="11" fill="#c79a4b" opacity=".4"/>
           <circle class="marker__dot" cx="242.8" cy="476.8" r="8.5" fill="#c79a4b" stroke="#fff" stroke-width="2.5"/>
-          <text x="242.8" y="463.8" text-anchor="middle" font-size="15" font-weight="700" fill="#3e2415" stroke="#f6ead9" stroke-width="3" stroke-linejoin="round" paint-order="stroke">普洱</text>
+          <text x="242.8" y="463.8" text-anchor="middle" font-size="15" font-weight="700" fill="#3e2415" stroke="#f6ead9" stroke-width="3" stroke-linejoin="round" paint-order="stroke" data-en="Puer">普洱</text>
         </g>
 
         <!-- 指北针 -->
@@ -406,12 +409,12 @@
       </svg>
 
       <div class="map-legend">
-        <span><i style="background:#c8452e"></i>德宏 / 保山（怒江—高黎贡山沿线）</span>
-        <span><i style="background:#3e7a55"></i>临沧（澜沧江中游）</span>
-        <span><i style="background:#c79a4b"></i>普洱（澜沧江下游）</span>
-        <span><i style="background:#7fa8c4"></i>怒江 · 澜沧江 · 元江</span>
+        <span><i style="background:#c8452e"></i><span data-en="Dehong / Baoshan (along the Nujiang–Gaoligong belt)">德宏 / 保山（怒江—高黎贡山沿线）</span></span>
+        <span><i style="background:#3e7a55"></i><span data-en="Lincang (middle Lancang River)">临沧（澜沧江中游）</span></span>
+        <span><i style="background:#c79a4b"></i><span data-en="Puer (lower Lancang River)">普洱（澜沧江下游）</span></span>
+        <span><i style="background:#7fa8c4"></i><span data-en="Nujiang · Lancang · Yuan Rivers">怒江 · 澜沧江 · 元江</span></span>
       </div>
-      <p style="text-align:center;font-size:12.5px;color:var(--muted-2);margin-top:10px">轮廓以云南省行政区划为底 · 抽稀简化，标注主要州市与咖啡产区</p>
+      <p style="text-align:center;font-size:12.5px;color:var(--muted-2);margin-top:10px" data-en="Outline based on Yunnan's administrative divisions · simplified; major cities and coffee regions marked">轮廓以云南省行政区划为底 · 抽稀简化，标注主要州市与咖啡产区</p>
     </div>
   </div>
 </section>
@@ -421,59 +424,59 @@
   <div class="wrap">
     <div class="section__head reveal">
       <span class="eyebrow">Four Regions</span>
-      <h2 class="section__title">四大产区，四种性格</h2>
-      <p class="section__lead">同一片省域里，海拔、降水与品种组合的差异，足以让杯中的风味分道扬镳。</p>
+      <h2 class="section__title" data-en="Four Regions, Four Characters">四大产区，四种性格</h2>
+      <p class="section__lead" data-en="Within one province, differences in altitude, rainfall and cultivars are enough to send cup flavors down separate paths.">同一片省域里，海拔、降水与品种组合的差异，足以让杯中的风味分道扬镳。</p>
     </div>
 
     <div class="grid grid--4">
       <article class="card reveal" data-rcard="baoshan">
         <span class="card__idx">01</span>
-        <h3>保山 · 怒江峡谷</h3>
-        <p style="margin-bottom:14px">云南咖啡最早的规模化种植区之一，怒江与高黎贡山塑造了干热的峡谷气候。</p>
+        <h3 data-en="Baoshan · Nujiang Canyon">保山 · 怒江峡谷</h3>
+        <p style="margin-bottom:14px" data-en="One of Yunnan's earliest scaled growing areas; the Nujiang and Gaoligong Mountains shape its dry, hot canyon climate.">云南咖啡最早的规模化种植区之一，怒江与高黎贡山塑造了干热的峡谷气候。</p>
         <div class="tags" style="margin-bottom:14px">
-          <span class="tag tag--cherry">海拔 900—1600m</span>
-          <span class="tag">坚果巧克力</span>
+          <span class="tag tag--cherry" data-en="900–1600 m">海拔 900—1600m</span>
+          <span class="tag" data-en="Nutty / Chocolate">坚果巧克力</span>
         </div>
-        <p style="font-size:14px"><strong>主栽品种：</strong>卡蒂姆、铁皮卡<br>
+        <p style="font-size:14px" data-en-html="<strong>Main cultivars:</strong> Catimor, Typica<br><strong>Flavor:</strong> nuts, cocoa, caramel; round and sweet<br><strong>Represented by:</strong> local brands &amp; estates such as Bidun, Gaoligong, Sinloy"><strong>主栽品种：</strong>卡蒂姆、铁皮卡<br>
         <strong>风味倾向：</strong>坚果、可可、焦糖，口感圆润甘甜<br>
         <strong>代表力量：</strong>比顿、高黎贡、辛鹿等本地品牌与庄园</p>
       </article>
 
       <article class="card reveal" data-rcard="puer" data-delay="80">
         <span class="card__idx">02</span>
-        <h3>普洱 · 澜沧江下游</h3>
-        <p style="margin-bottom:14px">当前种植面积与产量最集中的区域，1988 年后因国际企业的农技项目而加速产业化。</p>
+        <h3 data-en="Puer · Lower Lancang River">普洱 · 澜沧江下游</h3>
+        <p style="margin-bottom:14px" data-en="The area with the most concentrated planting area and output today; industrialization accelerated after 1988 through agronomy projects of international firms.">当前种植面积与产量最集中的区域，1988 年后因国际企业的农技项目而加速产业化。</p>
         <div class="tags" style="margin-bottom:14px">
-          <span class="tag tag--gold">海拔 1000—1600m</span>
-          <span class="tag">醇厚均衡</span>
+          <span class="tag tag--gold" data-en="1000–1600 m">海拔 1000—1600m</span>
+          <span class="tag" data-en="Balanced &amp; full-bodied">醇厚均衡</span>
         </div>
-        <p style="font-size:14px"><strong>主栽品种：</strong>卡蒂姆为主<br>
+        <p style="font-size:14px" data-en-html="<strong>Main cultivars:</strong> mostly Catimor<br><strong>Flavor:</strong> full-bodied, low acidity, brown-sugar sweetness, clean finish<br><strong>Represented by:</strong> large estates &amp; processing systems such as Manlaojiang, Aini"><strong>主栽品种：</strong>卡蒂姆为主<br>
         <strong>风味倾向：</strong>醇厚、低酸、红糖甜，尾韵干净<br>
         <strong>代表力量：</strong>曼老江、爱伲等大型庄园与加工体系</p>
       </article>
 
       <article class="card reveal" data-rcard="lincang" data-delay="160">
         <span class="card__idx">03</span>
-        <h3>临沧 · 澜沧江中游</h3>
-        <p style="margin-bottom:14px">近年来增长最快的产区之一，山地立体气候明显，高海拔地块表现突出。</p>
+        <h3 data-en="Lincang · Middle Lancang River">临沧 · 澜沧江中游</h3>
+        <p style="margin-bottom:14px" data-en="One of the fastest-growing regions in recent years, with pronounced vertical mountain climates and standout high-altitude plots.">近年来增长最快的产区之一，山地立体气候明显，高海拔地块表现突出。</p>
         <div class="tags" style="margin-bottom:14px">
-          <span class="tag tag--leaf">海拔 1000—1800m</span>
-          <span class="tag">花果酸质</span>
+          <span class="tag tag--leaf" data-en="1000–1800 m">海拔 1000—1800m</span>
+          <span class="tag" data-en="Floral &amp; fruity acidity">花果酸质</span>
         </div>
-        <p style="font-size:14px"><strong>主栽品种：</strong>卡蒂姆、铁皮卡<br>
+        <p style="font-size:14px" data-en-html="<strong>Main cultivars:</strong> Catimor, Typica<br><strong>Flavor:</strong> floral and stone-fruit aromas, citrus and berry acidity, tea-like<br><strong>Represented by:</strong> mainly cooperatives &amp; primary processing; rapid specialty progress"><strong>主栽品种：</strong>卡蒂姆、铁皮卡<br>
         <strong>风味倾向：</strong>花果香、柑橘与莓果酸质，茶感明显<br>
         <strong>代表力量：</strong>以合作社与初加工体系为主，精品化进程较快</p>
       </article>
 
       <article class="card reveal" data-rcard="dehong" data-delay="240">
         <span class="card__idx">04</span>
-        <h3>德宏 · 西南边陲</h3>
-        <p style="margin-bottom:14px">海拔相对低、热量充足，是较早形成「种植—加工—出口」一体化链条的产区。</p>
+        <h3 data-en="Dehong · Southwest Frontier">德宏 · 西南边陲</h3>
+        <p style="margin-bottom:14px" data-en="Relatively low altitude and ample heat; among the first to form an integrated 'growing–processing–export' chain.">海拔相对低、热量充足，是较早形成「种植—加工—出口」一体化链条的产区。</p>
         <div class="tags" style="margin-bottom:14px">
-          <span class="tag tag--cherry">海拔 800—1400m</span>
-          <span class="tag">醇厚低酸</span>
+          <span class="tag tag--cherry" data-en="800–1400 m">海拔 800—1400m</span>
+          <span class="tag" data-en="Full-bodied, low acidity">醇厚低酸</span>
         </div>
-        <p style="font-size:14px"><strong>主栽品种：</strong>卡蒂姆、S288 等<br>
+        <p style="font-size:14px" data-en-html="<strong>Main cultivars:</strong> Catimor, S288, etc.<br><strong>Flavor:</strong> full-bodied, low acidity, malty and dark-sugar notes, heavy body<br><strong>Represented by:</strong> leading firms such as Hogood, strong in instant &amp; freeze-dried processing"><strong>主栽品种：</strong>卡蒂姆、S288 等<br>
         <strong>风味倾向：</strong>醇厚、低酸、麦香与黑糖调，body 饱满<br>
         <strong>代表力量：</strong>后谷等龙头企业，速溶与冻干加工能力强</p>
       </article>
@@ -486,35 +489,35 @@
   <div class="wrap wrap--narrow">
     <div class="section__head reveal">
       <span class="eyebrow">History</span>
-      <h2 class="section__title">一百三十余年，从一棵树到一个产业</h2>
-      <p class="section__lead">从传教士带来的一株咖啡苗，到今天国潮品牌扎堆的货架，云南咖啡走过了五个阶段。</p>
+      <h2 class="section__title" data-en="130+ Years, From One Tree to an Industry">一百三十余年，从一棵树到一个产业</h2>
+      <p class="section__lead" data-en="From a coffee seedling brought by missionaries to today's shelves crowded with homegrown brands, Yunnan coffee has passed through five stages.">从传教士带来的一株咖啡苗，到今天国潮品牌扎堆的货架，云南咖啡走过了五个阶段。</p>
     </div>
 
     <div class="timeline reveal">
       <div class="tl-item">
         <div class="tl-item__year">1892</div>
-        <h4>传教士引入 · 朱苦拉</h4>
-        <p>法国传教士在大理宾川朱苦拉村种下咖啡树，这批古咖啡树至今仍有存活，被视为中国咖啡种植的起点之一。</p>
+        <h4 data-en="Missionary introduction · Zhukula">传教士引入 · 朱苦拉</h4>
+        <p data-en="A French missionary planted coffee trees in Zhukula village, Binchuan, Dali. Some of these ancient trees still survive and are seen as one of the starting points of coffee cultivation in China.">法国传教士在大理宾川朱苦拉村种下咖啡树，这批古咖啡树至今仍有存活，被视为中国咖啡种植的起点之一。</p>
       </div>
       <div class="tl-item">
         <div class="tl-item__year">1950s</div>
-        <h4>国营农场规模化</h4>
-        <p>国营农场体系下，云南开始有组织地扩大咖啡种植面积，为后来的产业化打下土地与人力基础。</p>
+        <h4 data-en="State farms scale up">国营农场规模化</h4>
+        <p data-en="Under the state-farm system, Yunnan began organically expanding coffee acreage, laying the land and labor foundations for later industrialization.">国营农场体系下，云南开始有组织地扩大咖啡种植面积，为后来的产业化打下土地与人力基础。</p>
       </div>
       <div class="tl-item">
         <div class="tl-item__year">1988</div>
-        <h4>国际企业进入普洱</h4>
-        <p>雀巢在普洱设立咖啡农业技术援助项目，引入标准化种植、收购与加工体系，云南咖啡真正接入国际市场。</p>
+        <h4 data-en="International firms enter Puer">国际企业进入普洱</h4>
+        <p data-en="Nestlé set up a coffee agronomy assistance project in Puer, introducing standardized planting, purchasing and processing systems, truly connecting Yunnan coffee to international markets.">雀巢在普洱设立咖啡农业技术援助项目，引入标准化种植、收购与加工体系，云南咖啡真正接入国际市场。</p>
       </div>
       <div class="tl-item">
         <div class="tl-item__year">2010s</div>
-        <h4>精品化浪潮</h4>
-        <p>本地烘焙商与庄园开始做单一产区、微批次与处理法实验，云南豆第一次以「风味」而非「原料」被讨论。</p>
+        <h4 data-en="Specialty wave">精品化浪潮</h4>
+        <p data-en="Local roasters and estates began single-origin, micro-lot and processing experiments; Yunnan beans were discussed for the first time as 'flavor' rather than 'raw material.'">本地烘焙商与庄园开始做单一产区、微批次与处理法实验，云南豆第一次以「风味」而非「原料」被讨论。</p>
       </div>
       <div class="tl-item">
         <div class="tl-item__year">2020s</div>
-        <h4>国潮品牌崛起</h4>
-        <p>本土连锁与新消费品牌把「云南豆」写进品牌叙事，冻干、咖啡液与即饮形态推动云南咖啡走向大众日常。</p>
+        <h4 data-en="Homegrown brands rise">国潮品牌崛起</h4>
+        <p data-en="Local chains and new-consumer brands wrote 'Yunnan beans' into their brand narratives; freeze-dried, liquid and ready-to-drink formats pushed Yunnan coffee into everyday life.">本土连锁与新消费品牌把「云南豆」写进品牌叙事，冻干、咖啡液与即饮形态推动云南咖啡走向大众日常。</p>
       </div>
     </div>
   </div>
@@ -526,13 +529,13 @@
   <header class="chapter__head">
     <div class="wrap">
       <span class="chapter__no">02</span>
-      <h2 class="chapter__title">品种与加工</h2>
-      <p class="chapter__lead">品种决定一杯咖啡的骨架，处理法决定它被如何记住。从种下的那一刻，到进烘豆机的那一刻，这两步共同写定了杯中的上限。</p>
+      <h2 class="chapter__title" data-en="Varieties &amp; Processing">品种与加工</h2>
+      <p class="chapter__lead" data-en="Variety sets the skeleton of a cup, processing decides how it is remembered. From the moment it is planted to the moment it enters the roaster, these two steps together write the ceiling of the cup.">品种决定一杯咖啡的骨架，处理法决定它被如何记住。从种下的那一刻，到进烘豆机的那一刻，这两步共同写定了杯中的上限。</p>
       <div class="chapter__meta">
-        <div><b>5</b>类主栽品种</div>
-        <div><b>4</b>类处理法</div>
-        <div><b>11—13</b>% 生豆目标含水率</div>
-        <div><b>4</b>档烘焙程度</div>
+        <div data-en-html="<b>5</b> Main cultivars"><b>5</b>类主栽品种</div>
+        <div data-en-html="<b>4</b> Processing methods"><b>4</b>类处理法</div>
+        <div data-en-html="<b>11&ndash;13</b>% Target moisture"><b>11—13</b>% 生豆目标含水率</div>
+        <div data-en-html="<b>4</b> Roast levels"><b>4</b>档烘焙程度</div>
       </div>
     </div>
   </header>
@@ -540,58 +543,58 @@
   <div class="wrap">
     <div class="section__head reveal">
       <span class="eyebrow">Main Cultivars</span>
-      <h2 class="section__title">五个主栽品种</h2>
-      <p class="section__lead">卡蒂姆撑起了云南咖啡的产量与抗病性，铁皮卡与波旁守住了风味的传统，卡杜拉与萨奇莫则在不同地块上补齐适配性。</p>
+      <h2 class="section__title" data-en="Five Main Cultivars">五个主栽品种</h2>
+      <p class="section__lead" data-en="Catimor carries Yunnan's yield and disease resistance, Typica and Bourbon guard the flavor tradition, while Caturra and Sarchimor adapt across different plots.">卡蒂姆撑起了云南咖啡的产量与抗病性，铁皮卡与波旁守住了风味的传统，卡杜拉与萨奇莫则在不同地块上补齐适配性。</p>
       <svg class="squiggle" viewBox="0 0 120 12" fill="none" aria-hidden="true"><path d="M2 8C14 2 26 10 38 5s24-7 36-1 24 6 42-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
     </div>
 
     <div class="grid grid--5">
       <article class="card reveal">
         <span class="card__idx">01</span>
-        <div class="tags" style="margin-bottom:12px"><span class="tag tag--cherry">主栽 · 占比最大</span></div>
-        <h3>卡蒂姆 Catimor</h3>
-        <p style="font-size:13.6px;color:var(--muted-2);margin-bottom:10px">帝汶杂交种（Timor Hybrid）× 卡杜拉</p>
-        <p><strong>植株：</strong>矮化紧凑、产量高、对叶锈病抗性较强<br>
+        <div class="tags" style="margin-bottom:12px"><span class="tag tag--cherry" data-en="Main · largest share">主栽 · 占比最大</span></div>
+        <h3 data-en="Catimor">卡蒂姆 Catimor</h3>
+        <p style="font-size:13.6px;color:var(--muted-2);margin-bottom:10px" data-en="Timor Hybrid × Caturra">帝汶杂交种（Timor Hybrid）× 卡杜拉</p>
+        <p data-en-html="<strong>Plant:</strong> dwarf, compact, high-yielding, fairly leaf-rust resistant<br><strong>Flavor:</strong> full-bodied, nutty and cocoa, low acidity<br><strong>Altitude:</strong> about 800&ndash;1600 m"><strong>植株：</strong>矮化紧凑、产量高、对叶锈病抗性较强<br>
         <strong>风味：</strong>醇厚、坚果与可可调，酸度偏低<br>
         <strong>海拔：</strong>约 800—1600 m</p>
       </article>
 
       <article class="card reveal" data-delay="70">
         <span class="card__idx">02</span>
-        <div class="tags" style="margin-bottom:12px"><span class="tag tag--leaf">风味传统</span></div>
-        <h3>铁皮卡 Typica</h3>
-        <p style="font-size:13.6px;color:var(--muted-2);margin-bottom:10px">阿拉比卡经典原生种系</p>
-        <p><strong>植株：</strong>树形高大、顶叶偏古铜色、产量偏低<br>
+        <div class="tags" style="margin-bottom:12px"><span class="tag tag--leaf" data-en="Flavor tradition">风味传统</span></div>
+        <h3 data-en="Typica">铁皮卡 Typica</h3>
+        <p style="font-size:13.6px;color:var(--muted-2);margin-bottom:10px" data-en="Classic Arabica heirloom">阿拉比卡经典原生种系</p>
+        <p data-en-html="<strong>Plant:</strong> tall, bronze-tipped leaves, lower yield<br><strong>Flavor:</strong> very clean, sweet, gentle and non-sharp acidity<br><strong>Altitude:</strong> about 1000&ndash;1800 m"><strong>植株：</strong>树形高大、顶叶偏古铜色、产量偏低<br>
         <strong>风味：</strong>干净度高、甜感好、酸质柔和不尖锐<br>
         <strong>海拔：</strong>约 1000—1800 m</p>
       </article>
 
       <article class="card reveal" data-delay="140">
         <span class="card__idx">03</span>
-        <div class="tags" style="margin-bottom:12px"><span class="tag tag--gold">甜感突出</span></div>
-        <h3>波旁 Bourbon</h3>
-        <p style="font-size:13.6px;color:var(--muted-2);margin-bottom:10px">铁皮卡的自然突变后代</p>
-        <p><strong>植株：</strong>圆锥形树冠、果实着生密集、易感锈病<br>
+        <div class="tags" style="margin-bottom:12px"><span class="tag tag--gold" data-en="Pronounced sweetness">甜感突出</span></div>
+        <h3 data-en="Bourbon">波旁 Bourbon</h3>
+        <p style="font-size:13.6px;color:var(--muted-2);margin-bottom:10px" data-en="Natural mutation of Typica">铁皮卡的自然突变后代</p>
+        <p data-en-html="<strong>Plant:</strong> conical canopy, dense fruiting, rust-susceptible<br><strong>Flavor:</strong> high sweetness, rounded mouthfeel, clear caramel and nuts<br><strong>Altitude:</strong> about 1100&ndash;1800 m"><strong>植株：</strong>圆锥形树冠、果实着生密集、易感锈病<br>
         <strong>风味：</strong>甜感高、口感圆润，焦糖与坚果明显<br>
         <strong>海拔：</strong>约 1100—1800 m</p>
       </article>
 
       <article class="card reveal" data-delay="210">
         <span class="card__idx">04</span>
-        <div class="tags" style="margin-bottom:12px"><span class="tag tag--cherry">酸质明亮</span></div>
-        <h3>卡杜拉 Caturra</h3>
-        <p style="font-size:13.6px;color:var(--muted-2);margin-bottom:10px">波旁的矮化自然突变</p>
-        <p><strong>植株：</strong>矮化可密植、结果早、产量较高<br>
+        <div class="tags" style="margin-bottom:12px"><span class="tag tag--cherry" data-en="Bright acidity">酸质明亮</span></div>
+        <h3 data-en="Caturra">卡杜拉 Caturra</h3>
+        <p style="font-size:13.6px;color:var(--muted-2);margin-bottom:10px" data-en="Dwarf natural mutation of Bourbon">波旁的矮化自然突变</p>
+        <p data-en-html="<strong>Plant:</strong> dwarf, plantable densely, early-bearing, higher yield<br><strong>Flavor:</strong> bright acidity, clear citrus and brown-sugar notes<br><strong>Altitude:</strong> about 1000&ndash;1700 m"><strong>植株：</strong>矮化可密植、结果早、产量较高<br>
         <strong>风味：</strong>酸质明亮，柑橘与红糖调性清晰<br>
         <strong>海拔：</strong>约 1000—1700 m</p>
       </article>
 
       <article class="card reveal" data-delay="280">
         <span class="card__idx">05</span>
-        <div class="tags" style="margin-bottom:12px"><span class="tag tag--leaf">适应性广</span></div>
-        <h3>萨奇莫 Sarchimor</h3>
-        <p style="font-size:13.6px;color:var(--muted-2);margin-bottom:10px">帝汶杂交种 × Villa Sarchi</p>
-        <p><strong>植株：</strong>抗锈病能力强、适应性广、稳产<br>
+        <div class="tags" style="margin-bottom:12px"><span class="tag tag--leaf" data-en="Wide adaptability">适应性广</span></div>
+        <h3 data-en="Sarchimor">萨奇莫 Sarchimor</h3>
+        <p style="font-size:13.6px;color:var(--muted-2);margin-bottom:10px" data-en="Timor Hybrid × Villa Sarchi">帝汶杂交种 × Villa Sarchi</p>
+        <p data-en-html="<strong>Plant:</strong> strong rust resistance, wide adaptability, stable yield<br><strong>Flavor:</strong> clean cup, balanced body and sweetness<br><strong>Altitude:</strong> about 900&ndash;1700 m"><strong>植株：</strong>抗锈病能力强、适应性广、稳产<br>
         <strong>风味：</strong>杯感干净，醇厚度与甜感平衡<br>
         <strong>海拔：</strong>约 900—1700 m</p>
       </article>
@@ -604,40 +607,40 @@
   <div class="wrap">
     <div class="section__head section__head--center reveal">
       <span class="eyebrow">Flavor Wheel</span>
-      <h2 class="section__title">云南咖啡的典型风味描述</h2>
-      <p class="section__lead">在杯测桌上，云南豆最常被写下的六个词。</p>
+      <h2 class="section__title" data-en="Typical Flavor Notes of Yunnan Coffee">云南咖啡的典型风味描述</h2>
+      <p class="section__lead" data-en="The six words most often written down for Yunnan beans on the cupping table.">在杯测桌上，云南豆最常被写下的六个词。</p>
     </div>
 
     <div class="flavor reveal">
       <div class="flavor__item">
         <div class="flavor__dot" style="background:rgba(169,113,60,.16)">🌰</div>
-        <h4>坚果</h4>
-        <p>杏仁、榛子、花生</p>
+        <h4 data-en="Nutty">坚果</h4>
+        <p data-en="Almond, hazelnut, peanut">杏仁、榛子、花生</p>
       </div>
       <div class="flavor__item">
         <div class="flavor__dot" style="background:rgba(107,66,38,.16)">🍫</div>
-        <h4>巧克力</h4>
-        <p>可可、牛奶巧克力</p>
+        <h4 data-en="Chocolate">巧克力</h4>
+        <p data-en="Cocoa, milk chocolate">可可、牛奶巧克力</p>
       </div>
       <div class="flavor__item">
         <div class="flavor__dot" style="background:rgba(199,154,75,.2)">🍯</div>
-        <h4>红糖</h4>
-        <p>黑糖、蜂蜜、焦糖</p>
+        <h4 data-en="Brown sugar">红糖</h4>
+        <p data-en="Dark sugar, honey, caramel">黑糖、蜂蜜、焦糖</p>
       </div>
       <div class="flavor__item">
         <div class="flavor__dot" style="background:rgba(232,163,61,.2)">🍊</div>
-        <h4>柑橘</h4>
-        <p>橙、柠檬、柚子皮</p>
+        <h4 data-en="Citrus">柑橘</h4>
+        <p data-en="Orange, lemon, pomelo peel">橙、柠檬、柚子皮</p>
       </div>
       <div class="flavor__item">
         <div class="flavor__dot" style="background:rgba(200,69,46,.14)">🍓</div>
-        <h4>莓果酸</h4>
-        <p>草莓、蓝莓、红醋栗</p>
+        <h4 data-en="Berry acidity">莓果酸</h4>
+        <p data-en="Strawberry, blueberry, red currant">草莓、蓝莓、红醋栗</p>
       </div>
       <div class="flavor__item">
         <div class="flavor__dot" style="background:rgba(62,122,85,.16)">🍃</div>
-        <h4>茶感</h4>
-        <p>红茶、乌龙、回甘</p>
+        <h4 data-en="Tea-like">茶感</h4>
+        <p data-en="Black tea, oolong, aftertaste">红茶、乌龙、回甘</p>
       </div>
     </div>
   </div>
@@ -648,35 +651,35 @@
   <div class="wrap">
     <div class="section__head reveal">
       <span class="eyebrow">Overview</span>
-      <h2 class="section__title">四种处理法，四条风味路径</h2>
-      <p class="section__lead">处理法的本质，是决定「果肉和果胶在什么状态下、离开种子多久」。时间越长，风味越浓；介入越早，杯感越干净。</p>
+      <h2 class="section__title" data-en="Four Processing Methods, Four Flavor Paths">四种处理法，四条风味路径</h2>
+      <p class="section__lead" data-en="Processing is essentially deciding 'in what state the pulp and mucilage leave the seed, and for how long.' Longer time, richer flavor; earlier intervention, cleaner cup.">处理法的本质，是决定「果肉和果胶在什么状态下、离开种子多久」。时间越长，风味越浓；介入越早，杯感越干净。</p>
       <svg class="squiggle" viewBox="0 0 120 12" fill="none" aria-hidden="true"><path d="M2 8C14 2 26 10 38 5s24-7 36-1 24 6 42-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
     </div>
 
     <div class="grid grid--4">
       <article class="card reveal">
         <span class="card__idx">01</span>
-        <h3>水洗 Washed</h3>
-        <p>去果皮后发酵脱胶、再清洗干燥。杯感干净、酸质明亮，最能体现品种与地块本身的特性。</p>
-        <div class="tags" style="margin-top:14px"><span class="tag tag--leaf">干净</span><span class="tag tag--leaf">明亮酸质</span></div>
+        <h3 data-en="Washed">水洗 Washed</h3>
+        <p data-en="Pulped, fermented to remove mucilage, then washed and dried. Clean cup, bright acidity — best shows the variety and plot itself.">去果皮后发酵脱胶、再清洗干燥。杯感干净、酸质明亮，最能体现品种与地块本身的特性。</p>
+        <div class="tags" style="margin-top:14px"><span class="tag tag--leaf" data-en="Clean">干净</span><span class="tag tag--leaf" data-en="Bright acidity">明亮酸质</span></div>
       </article>
       <article class="card reveal" data-delay="70">
         <span class="card__idx">02</span>
-        <h3>日晒 Natural</h3>
-        <p>整果直接晾晒，果实在干燥过程中持续与种子互动。甜感重、口感醇厚，常带莓果与酒酿调。</p>
-        <div class="tags" style="margin-top:14px"><span class="tag tag--gold">甜感重</span><span class="tag tag--gold">醇厚</span></div>
+        <h3 data-en="Natural">日晒 Natural</h3>
+        <p data-en="Whole cherries dried directly; the fruit keeps interacting with the seed as it dries. Heavy sweetness, full body, often berry and fermented notes.">整果直接晾晒，果实在干燥过程中持续与种子互动。甜感重、口感醇厚，常带莓果与酒酿调。</p>
+        <div class="tags" style="margin-top:14px"><span class="tag tag--gold" data-en="Heavy sweetness">甜感重</span><span class="tag tag--gold" data-en="Full body">醇厚</span></div>
       </article>
       <article class="card reveal" data-delay="140">
         <span class="card__idx">03</span>
-        <h3>蜜处理 Honey</h3>
-        <p>去除果皮但保留果胶层干燥，按保留量分红蜜、黄蜜、黑蜜。甜度高、层次丰富，介于水洗与日晒之间。</p>
-        <div class="tags" style="margin-top:14px"><span class="tag tag--cherry">高甜度</span><span class="tag tag--cherry">层次丰富</span></div>
+        <h3 data-en="Honey">蜜处理 Honey</h3>
+        <p data-en="Pulp removed but mucilage kept and dried; by how much is kept it is split into red, yellow and black honey. High sweetness, layered, between washed and natural.">去除果皮但保留果胶层干燥，按保留量分红蜜、黄蜜、黑蜜。甜度高、层次丰富，介于水洗与日晒之间。</p>
+        <div class="tags" style="margin-top:14px"><span class="tag tag--cherry" data-en="High sweetness">高甜度</span><span class="tag tag--cherry" data-en="Layered">层次丰富</span></div>
       </article>
       <article class="card reveal" data-delay="210">
         <span class="card__idx">04</span>
-        <h3>创新处理 Experimental</h3>
-        <p>厌氧发酵、二氧化碳浸渍、乳酸处理等。用可控环境制造新的风味路径，也是云南庄园近年的发力点。</p>
-        <div class="tags" style="margin-top:14px"><span class="tag">实验性</span><span class="tag">风味强烈</span></div>
+        <h3 data-en="Experimental">创新处理 Experimental</h3>
+        <p data-en="Anaerobic fermentation, carbonic maceration, lactic processing, etc. Controlled environments create new flavor paths — a recent focus of Yunnan estates.">厌氧发酵、二氧化碳浸渍、乳酸处理等。用可控环境制造新的风味路径，也是云南庄园近年的发力点。</p>
+        <div class="tags" style="margin-top:14px"><span class="tag" data-en="Experimental">实验性</span><span class="tag" data-en="Intense flavor">风味强烈</span></div>
       </article>
     </div>
   </div>
@@ -687,34 +690,34 @@
   <div class="wrap">
     <div class="section__head reveal">
       <span class="eyebrow">Roasting</span>
-      <h2 class="section__title">四种烘焙法</h2>
-      <p class="section__lead">浅烘、中烘、中深烘、深烘——同一颗云南豆在不同烘焙度下会走向完全不同的风味方向。</p>
+      <h2 class="section__title" data-en="Four Roast Levels">四种烘焙法</h2>
+      <p class="section__lead" data-en="Light, medium, medium-dark and dark — the same Yunnan bean heads in completely different flavor directions at different roast levels.">浅烘、中烘、中深烘、深烘——同一颗云南豆在不同烘焙度下会走向完全不同的风味方向。</p>
     </div>
 
     <div class="roast reveal">
       <div class="roast__row">
         <div class="roast__name">浅烘<small>Light Roast</small></div>
         <div class="roast__bar"><i style="left:20%"></i></div>
-        <p class="roast__txt">突出产地风味：花果香、柑橘与莓果酸质最清晰，body 偏轻盈。适合云南高海拔水洗批次。</p>
+        <p class="roast__txt" data-en="Highlights origin character: floral and fruity aromas, citrus and berry acidity are clearest, body on the lighter side. Suited to high-altitude washed Yunnan lots.">突出产地风味：花果香、柑橘与莓果酸质最清晰，body 偏轻盈。适合云南高海拔水洗批次。</p>
       </div>
       <div class="roast__row">
         <div class="roast__name">中烘<small>Medium Roast</small></div>
         <div class="roast__bar"><i style="left:52%"></i></div>
-        <p class="roast__txt">酸甜平衡：焦糖与坚果开始出现，酸质仍在，口感更圆润。是最通用的日常区间。</p>
+        <p class="roast__txt" data-en="Balanced sweet and sour: caramel and nuts emerge, acidity remains, mouthfeel rounder. The most versatile everyday range.">酸甜平衡：焦糖与坚果开始出现，酸质仍在，口感更圆润。是最通用的日常区间。</p>
       </div>
       <div class="roast__row">
         <div class="roast__name">中深烘<small>Medium-Dark</small></div>
         <div class="roast__bar"><i style="left:70%"></i></div>
-        <p class="roast__txt">醇厚走向：酸度退居次要，巧克力、黑糖与烘烤感增强，body 明显变厚。</p>
+        <p class="roast__txt" data-en="Toward full body: acidity recedes, chocolate, dark sugar and roast notes strengthen, body clearly thickens.">醇厚走向：酸度退居次要，巧克力、黑糖与烘烤感增强，body 明显变厚。</p>
       </div>
       <div class="roast__row">
         <div class="roast__name">深烘<small>Dark Roast</small></div>
         <div class="roast__bar"><i style="left:86%"></i></div>
-        <p class="roast__txt">苦甜与厚重：产地特征被大幅统一，可可与烟熏调突出，常见于意式拼配与速溶原料。</p>
+        <p class="roast__txt" data-en="Bitter-sweet and heavy: origin traits are largely unified, cocoa and smoky notes stand out, common in espresso blends and instant raw material.">苦甜与厚重：产地特征被大幅统一，可可与烟熏调突出，常见于意式拼配与速溶原料。</p>
       </div>
     </div>
 
-    <p style="font-size:12.8px;color:var(--muted-2);margin-top:18px">※ 上图中的标尺位置为示意，实际烘焙度需结合豆表色值（Agtron）与一爆二爆时间判断。</p>
+    <p style="font-size:12.8px;color:var(--muted-2);margin-top:18px" data-en="※ The scale positions above are illustrative; actual roast level should be judged by bean surface color (Agtron) and first/second crack timing.">※ 上图中的标尺位置为示意，实际烘焙度需结合豆表色值（Agtron）与一爆二爆时间判断。</p>
   </div>
 </section>
 </section>
@@ -724,13 +727,13 @@
   <header class="chapter__head">
     <div class="wrap">
       <span class="chapter__no">03</span>
-      <h2 class="chapter__title">品牌馆</h2>
-      <p class="chapter__lead">同一种云南豆，会被做成 3 块钱一条的速溶，也会被做成 80 块一包的微批次。这里按「产品形态」收录 24 个与云南咖啡相关的品牌，供检索与对照。</p>
+      <h2 class="chapter__title" data-en="Brand Showcase">品牌馆</h2>
+      <p class="chapter__lead" data-en="The same Yunnan bean becomes a ¥3 instant stick or an ¥80 micro-lot. Here we list 24 Yunnan-related coffee brands by product format for search and comparison.">同一种云南豆，会被做成 3 块钱一条的速溶，也会被做成 80 块一包的微批次。这里按「产品形态」收录 24 个与云南咖啡相关的品牌，供检索与对照。</p>
       <div class="chapter__meta">
-        <div><b>24</b>收录品牌</div>
-        <div><b>4</b>类形态</div>
-        <div><b>7</b>个产区标签</div>
-        <div><b>非商业</b>纯信息展示</div>
+        <div data-en-html="<b>24</b> Brands listed"><b>24</b>收录品牌</div>
+        <div data-en-html="<b>4</b> Format types"><b>4</b>类形态</div>
+        <div data-en-html="<b>7</b> Region tags"><b>7</b>个产区标签</div>
+        <div data-en-html="<b>Non-commercial</b> Pure info display"><b>非商业</b>纯信息展示</div>
       </div>
     </div>
   </header>
@@ -742,19 +745,19 @@
         <div class="chips" id="brandChips"></div>
         <div class="search">
           <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.5"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          <input id="brandSearch" type="search" placeholder="搜索品牌名、类型或关键词…" aria-label="搜索品牌">
+          <input id="brandSearch" type="search" placeholder="搜索品牌名、类型或关键词…" aria-label="搜索品牌" data-en-ph="Search brand, type or keyword…" data-en-aria="Search brands">
         </div>
       </div>
     </div>
 
     <div class="filter-meta">
-      <span id="brandCount">共 <b>24</b> 个品牌 · 全部形态 / 全部产区</span>
-      <a class="link-reset" id="brandReset" href="#" style="display:none">清除筛选条件</a>
+      <span id="brandCount" data-en-html="<b>24</b> brands · All formats / All regions">共 <b>24</b> 个品牌 · 全部形态 / 全部产区</span>
+      <a class="link-reset" id="brandReset" href="#" style="display:none" data-en="Clear filters">清除筛选条件</a>
     </div>
 
     <div class="bgrid" id="brandGrid"></div>
 
-    <p style="font-size:12.8px;color:var(--muted-2);margin-top:26px">
+    <p style="font-size:12.8px;color:var(--muted-2);margin-top:26px" data-en-html="※ Inclusion criteria: brands directly related to Yunnan coffee&apos;s origin, raw material or brand narrative; compiled from public sources, unordered, not a recommendation or ranking. Filter state is written to the URL for easy bookmarking or sharing.&lt;br&gt;※ Region filters are generated dynamically from listed brands; regions with no listed brand won&apos;t appear. The origin coverage is broader than the brand list — see &lt;a class=&quot;tlink&quot; href=&quot;#terroir&quot;&gt;Terroir&lt;/a&gt;.">
       ※ 收录标准：与云南咖啡产地、原料或品牌叙事直接相关的品牌；资料来自公开渠道整理，排序不分先后，不构成推荐或排名。筛选状态会写入网址，可直接收藏或分享。<br>
       ※ 产区筛选项根据「已收录品牌」动态生成，暂无品牌收录的产区不会出现；产地覆盖范围大于品牌清单，详见<a class="tlink" href="#terroir">产区与风土</a>。
     </p>
@@ -767,13 +770,13 @@
   <header class="chapter__head">
     <div class="wrap">
       <span class="chapter__no">04</span>
-      <h2 class="chapter__title">咖啡文化</h2>
-      <p class="chapter__lead">当一片土地开始为咖啡办节、办赛、办市集，说明它已经不只是农作物了。节庆让产区被看见，也让一杯咖啡有了可以被抵达的来处。</p>
+      <h2 class="chapter__title" data-en="Coffee Culture">咖啡文化</h2>
+      <p class="chapter__lead" data-en="When a land starts holding festivals, competitions and markets for coffee, it means the crop has become more than agriculture. Festivals make origins visible and give a cup of coffee a place that can actually be reached.">当一片土地开始为咖啡办节、办赛、办市集，说明它已经不只是农作物了。节庆让产区被看见，也让一杯咖啡有了可以被抵达的来处。</p>
       <div class="chapter__meta">
-        <div><b>6</b>地咖啡节</div>
-        <div><b>11—3</b>月采收季体验</div>
-        <div><b>4</b>大主产区</div>
-        <div><b>全年</b>城市端市集</div>
+        <div data-en-html="<b>6</b> Coffee festivals"><b>6</b>地咖啡节</div>
+        <div data-en-html="<b>Nov–Mar</b> Harvest-season tours"><b>11—3</b>月采收季体验</div>
+        <div data-en-html="<b>4</b> Core regions"><b>4</b>大主产区</div>
+        <div data-en-html="<b>Year-round</b> City markets"><b>全年</b>城市端市集</div>
       </div>
     </div>
   </header>
@@ -781,69 +784,69 @@
   <div class="wrap">
     <div class="section__head reveal">
       <span class="eyebrow">Festivals</span>
-      <h2 class="section__title">各地咖啡节</h2>
-      <p class="section__lead">从生豆大赛到产地市集，云南各地的咖啡节庆正在把「产地」变成可以被抵达、被品尝、被购买的目的地。下面按地区梳理各地咖啡节的常见形态、时间与看点。</p>
+      <h2 class="section__title" data-en="Coffee Festivals by Region">各地咖啡节</h2>
+      <p class="section__lead" data-en="From green-bean competitions to origin markets, Yunnan's local coffee festivals are turning 'origin' into a destination that can be visited, tasted and bought. Below we map the common formats, timing and highlights by region.">从生豆大赛到产地市集，云南各地的咖啡节庆正在把「产地」变成可以被抵达、被品尝、被购买的目的地。下面按地区梳理各地咖啡节的常见形态、时间与看点。</p>
       <svg class="squiggle" viewBox="0 0 120 12" fill="none" aria-hidden="true"><path d="M2 8C14 2 26 10 38 5s24-7 36-1 24 6 42-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
     </div>
 
     <div class="grid" style="gap:16px">
       <article class="fest reveal">
-        <div class="fest__when"><b>普洱</b><span>澜沧江下游</span></div>
+        <div class="fest__when"><b data-en="Pu'er">普洱</b><span data-en="Lower Lancang River">澜沧江下游</span></div>
         <div>
-          <h3>咖啡节与生豆大赛</h3>
-          <p>云南规模较大、制度化程度较高的产地节庆之一。以生豆评鉴、公开杯测与产地拍卖为核心，把庄园、烘焙商与买家放在同一张桌子上，让「好豆卖得上价」这件事变得可验证。活动多安排在 11 月至次年 3 月的采收季前后，期间常有产地市集与庄园开放日同步进行。</p>
-          <div class="tags" style="margin-top:12px"><span class="tag tag--cherry">采收季</span><span class="tag">生豆评鉴</span><span class="tag">产地拍卖</span></div>
+          <h3 data-en="Coffee Festival & Green Bean Competition">咖啡节与生豆大赛</h3>
+          <p data-en="One of Yunnan's larger and more institutionalized origin events, built around green-bean judging, public cupping and origin auctions that put estates, roasters and buyers at the same table — making 'good beans fetch a good price' something verifiable. Held around the Nov–Mar harvest season, often alongside origin markets and estate open days.">云南规模较大、制度化程度较高的产地节庆之一。以生豆评鉴、公开杯测与产地拍卖为核心，把庄园、烘焙商与买家放在同一张桌子上，让「好豆卖得上价」这件事变得可验证。活动多安排在 11 月至次年 3 月的采收季前后，期间常有产地市集与庄园开放日同步进行。</p>
+          <div class="tags" style="margin-top:12px"><span class="tag tag--cherry" data-en="Harvest season">采收季</span><span class="tag" data-en="Green bean judging">生豆评鉴</span><span class="tag" data-en="Origin auction">产地拍卖</span></div>
         </div>
       </article>
 
       <article class="fest reveal" data-delay="70">
-        <div class="fest__when"><b>保山</b><span>怒江峡谷</span></div>
+        <div class="fest__when"><b data-en="Baoshan">保山</b><span data-en="Nujiang Canyon">怒江峡谷</span></div>
         <div>
-          <h3>咖啡文化节与庄园开放日</h3>
-          <p>围绕高黎贡山与怒江峡谷的庄园带展开，常见形式包括庄园参观、采摘体验、烘焙工坊与杯测公开课。保山是云南最早形成「产地即品牌」叙事的区域之一，地理标识意识强，活动往往把峡谷地块与庄园故事讲得最完整。</p>
-          <div class="tags" style="margin-top:12px"><span class="tag tag--cherry">冬春之交</span><span class="tag">庄园开放</span><span class="tag">采摘体验</span></div>
+          <h3 data-en="Coffee Culture Festival & Estate Open Days">咖啡文化节与庄园开放日</h3>
+          <p data-en="Centered on estates along the Gaoligong Mountains and Nujiang Canyon, common formats include estate tours, picking experiences, roasting workshops and cupping classes. Baoshan was among the first regions to form an 'origin-as-brand' narrative, with strong geographic-indication awareness — its events tell the canyon plots and estate stories most completely.">围绕高黎贡山与怒江峡谷的庄园带展开，常见形式包括庄园参观、采摘体验、烘焙工坊与杯测公开课。保山是云南最早形成「产地即品牌」叙事的区域之一，地理标识意识强，活动往往把峡谷地块与庄园故事讲得最完整。</p>
+          <div class="tags" style="margin-top:12px"><span class="tag tag--cherry" data-en="Winter–spring">冬春之交</span><span class="tag" data-en="Estate open days">庄园开放</span><span class="tag" data-en="Picking experience">采摘体验</span></div>
         </div>
       </article>
 
       <article class="fest reveal" data-delay="140">
-        <div class="fest__when"><b>临沧</b><span>澜沧江中游</span></div>
+        <div class="fest__when"><b data-en="Lincang">临沧</b><span data-en="Middle Lancang River">澜沧江中游</span></div>
         <div>
-          <h3>采收季产地体验</h3>
-          <p>集中在 11 月至次年 3 月的采收季，走进山地地块参与手工采摘、浮选与晒床翻动。对产区而言这既是农事体验，也是把处理标准讲给消费者听的场合——你会亲眼看到「全红果分批采摘」到底意味着多少趟山路。</p>
-          <div class="tags" style="margin-top:12px"><span class="tag tag--cherry">11—3 月</span><span class="tag">手工采摘</span><span class="tag">晒床翻晒</span></div>
+          <h3 data-en="Harvest-season Origin Tours">采收季产地体验</h3>
+          <p data-en="Focused on the Nov–Mar harvest season: walk into hillside plots to hand-pick, float-sort and turn the sun beds. For the origin this is both a farm experience and a chance to explain processing standards to consumers — you'll see firsthand what 'batch red-cherry picking' really costs in mountain trails.">集中在 11 月至次年 3 月的采收季，走进山地地块参与手工采摘、浮选与晒床翻动。对产区而言这既是农事体验，也是把处理标准讲给消费者听的场合——你会亲眼看到「全红果分批采摘」到底意味着多少趟山路。</p>
+          <div class="tags" style="margin-top:12px"><span class="tag tag--cherry" data-en="Nov–Mar">11—3 月</span><span class="tag" data-en="Hand-picking">手工采摘</span><span class="tag" data-en="Sun-bed turning">晒床翻晒</span></div>
         </div>
       </article>
 
       <article class="fest reveal" data-delay="210">
-        <div class="fest__when"><b>德宏</b><span>西南边陲</span></div>
+        <div class="fest__when"><b data-en="Dehong">德宏</b><span data-en="Southwest Frontier">西南边陲</span></div>
         <div>
-          <h3>边贸与产业主题活动</h3>
-          <p>以芒市为中心的产业活动更偏「链条」视角：种植、初加工、速溶与冻干产能，以及面向南亚东南亚的出口通道。这里是观察云南咖啡工业化能力的一扇窗，也常与边贸展、经贸洽谈同期举办。</p>
-          <div class="tags" style="margin-top:12px"><span class="tag tag--cherry">产业视角</span><span class="tag">边贸展会</span><span class="tag">加工参观</span></div>
+          <h3 data-en="Border-trade & Industry Events">边贸与产业主题活动</h3>
+          <p data-en="Mangshi-centered industry events take a more 'value-chain' view: planting, primary processing, instant and freeze-dried capacity, and export channels toward South and Southeast Asia. A window into Yunnan's coffee industrialization, often held alongside border-trade expos and economic fairs.">以芒市为中心的产业活动更偏「链条」视角：种植、初加工、速溶与冻干产能，以及面向南亚东南亚的出口通道。这里是观察云南咖啡工业化能力的一扇窗，也常与边贸展、经贸洽谈同期举办。</p>
+          <div class="tags" style="margin-top:12px"><span class="tag tag--cherry" data-en="Industry focus">产业视角</span><span class="tag" data-en="Border-trade expo">边贸展会</span><span class="tag" data-en="Processing tours">加工参观</span></div>
         </div>
       </article>
 
       <article class="fest reveal" data-delay="280">
-        <div class="fest__when"><b>昆明</b><span>城市端</span></div>
+        <div class="fest__when"><b data-en="Kunming">昆明</b><span data-en="City side">城市端</span></div>
         <div>
-          <h3>城市咖啡节与市集</h3>
-          <p>连锁与独立咖啡馆集中亮相的场合，一年多场、几乎全年可见。云南豆在这里完成从「原料」到「消费品牌」的展示：单一产区手冲、云南豆专柜、本土连锁快闪，都是城市咖啡节的常见内容。</p>
-          <div class="tags" style="margin-top:12px"><span class="tag tag--cherry">全年多场</span><span class="tag">独立咖啡馆</span><span class="tag">云南豆专柜</span></div>
+          <h3 data-en="City Coffee Festivals & Markets">城市咖啡节与市集</h3>
+          <p data-en="Where chains and independent cafés gather — multiple events a year, almost year-round. Yunnan beans complete their shift from 'raw material' to 'consumer brand' here: single-origin pour-over, Yunnan-bean counters and local-chain pop-ups are staples of city coffee festivals.">连锁与独立咖啡馆集中亮相的场合，一年多场、几乎全年可见。云南豆在这里完成从「原料」到「消费品牌」的展示：单一产区手冲、云南豆专柜、本土连锁快闪，都是城市咖啡节的常见内容。</p>
+          <div class="tags" style="margin-top:12px"><span class="tag tag--cherry" data-en="Year-round">全年多场</span><span class="tag" data-en="Independent cafés">独立咖啡馆</span><span class="tag" data-en="Yunnan-bean counters">云南豆专柜</span></div>
         </div>
       </article>
 
       <article class="fest reveal" data-delay="350">
-        <div class="fest__when"><b>大理</b><span>宾川朱苦拉</span></div>
+        <div class="fest__when"><b data-en="Dali">大理</b><span data-en="Binchuan · Zhukula">宾川朱苦拉</span></div>
         <div>
-          <h3>古咖啡树文化节</h3>
-          <p>1892 年法国传教士在朱苦拉村种下的咖啡树至今仍有存活，被视为中国咖啡种植的起点之一。当地围绕这批古咖啡树形成的文化活动，更像一次溯源：看古树、听引种史、喝一杯来自百年前那批树后代的咖啡。</p>
-          <div class="tags" style="margin-top:12px"><span class="tag tag--cherry">中国咖啡起点</span><span class="tag">古咖啡树</span><span class="tag">溯源体验</span></div>
+          <h3 data-en="Ancient Coffee Tree Culture Festival">古咖啡树文化节</h3>
+          <p data-en="The coffee trees planted by a French missionary in Zhukula village in 1892 still survive and are seen as one of the starting points of coffee cultivation in China. Local culture events around these ancient trees are more like a pilgrimage: see the old trees, hear the introduction history, and drink a cup from the descendants of those century-old trees.">1892 年法国传教士在朱苦拉村种下的咖啡树至今仍有存活，被视为中国咖啡种植的起点之一。当地围绕这批古咖啡树形成的文化活动，更像一次溯源：看古树、听引种史、喝一杯来自百年前那批树后代的咖啡。</p>
+          <div class="tags" style="margin-top:12px"><span class="tag tag--cherry" data-en="Birthplace of China coffee">中国咖啡起点</span><span class="tag" data-en="Ancient coffee trees">古咖啡树</span><span class="tag" data-en="Origin tracing">溯源体验</span></div>
         </div>
       </article>
 
     </div>
 
-    <p style="font-size:12.8px;color:var(--muted-2);margin-top:20px">※ 各地咖啡节的具体名称、举办时间与形式历年会有调整，请以主办方公告为准。本页仅做地区与形态梳理，不发布活动报名信息。</p>
+    <p style="font-size:12.8px;color:var(--muted-2);margin-top:20px" data-en="※ Specific names, dates and formats of local coffee festivals change year to year; please refer to organizers' announcements. This page only maps regions and formats and does not publish event registration.">※ 各地咖啡节的具体名称、举办时间与形式历年会有调整，请以主办方公告为准。本页仅做地区与形态梳理，不发布活动报名信息。</p>
   </div>
 </section>
 </section>
@@ -855,21 +858,21 @@
       <div class="about-row">
         <div class="about-col">
           <span class="chapter__no">05</span>
-          <h2 class="chapter__title">关于</h2>
-          <p class="chapter__lead">这里没有商城，没有广告位，也没有官方背书。它只是一份被整理过的、关于云南咖啡的公开笔记。</p>
+          <h2 class="chapter__title" data-en="About">关于</h2>
+          <p class="chapter__lead" data-en="There is no shop, no ad space, no official endorsement here — just a curated, public notebook about Yunnan coffee.">这里没有商城，没有广告位，也没有官方背书。它只是一份被整理过的、关于云南咖啡的公开笔记。</p>
           <div class="chapter__meta">
-            <div><b>非商业</b>非官方</div>
-            <div><b>纯静态</b>零依赖</div>
-            <div><b>无追踪</b>无 Cookie</div>
+            <div data-en-html="<b>Non-commercial</b> Unofficial"><b>非商业</b>非官方</div>
+            <div data-en-html="<b>Pure static</b> Zero dependency"><b>纯静态</b>零依赖</div>
+            <div data-en-html="<b>No tracking</b> No Cookie"><b>无追踪</b>无 Cookie</div>
           </div>
         </div>
 
         <div class="about-col reveal" id="statement">
           <span class="eyebrow">Statement</span>
-          <h2 class="section__title">网站定位声明</h2>
+          <h2 class="section__title" data-en="Site Positioning Statement">网站定位声明</h2>
           <svg class="squiggle" viewBox="0 0 120 12" fill="none" aria-hidden="true"><path d="M2 8C14 2 26 10 38 5s24-7 36-1 24 6 42-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <p class="text-lead" style="margin-top:20px">本站是一个<strong>非商业、非官方</strong>的纯信息展示与科普项目，旨在系统整理云南咖啡的产区地理、品种原料、加工工艺、品牌形态与文化脉络。</p>
-          <p class="text-lead" style="margin-top:14px">本站与文中提及的任何品牌、企业、庄园、行业协会及政府机构均<strong>无隶属、合作或授权关系</strong>，不售卖任何商品，不接受付费排名或推广位。</p>
+          <p class="text-lead" style="margin-top:20px" data-en-html="This site is a <strong>non-commercial, unofficial</strong> pure-info and educational project, aiming to systematically organize Yunnan coffee's origin geography, varieties and raw material, processing craft, brand formats and cultural context.">本站是一个<strong>非商业、非官方</strong>的纯信息展示与科普项目，旨在系统整理云南咖啡的产区地理、品种原料、加工工艺、品牌形态与文化脉络。</p>
+          <p class="text-lead" style="margin-top:14px" data-en-html="This site has no affiliation, cooperation or authorization with any brand, company, estate, industry association or government body mentioned herein; it sells nothing and accepts no paid ranking or promotion.">本站与文中提及的任何品牌、企业、庄园、行业协会及政府机构均<strong>无隶属、合作或授权关系</strong>，不售卖任何商品，不接受付费排名或推广位。</p>
           <div class="tags" style="margin-top:22px">
             <span class="tag tag--leaf">非商业</span>
             <span class="tag tag--leaf">非官方</span>
@@ -895,55 +898,55 @@
           </svg>
           <span class="brandmark__text"><span class="brandmark__cn">云南咖啡</span><span class="brandmark__en">ynkf.net</span></span>
         </div>
-        <p class="footer__about">一座关于云南咖啡的非官方科普站。以产区地理为骨架，从种子到杯子为叙事线，记录这片高原上的红果与酸质。</p>
+        <p class="footer__about" data-en="An unofficial educational site about Yunnan coffee. Built on origin geography, narrated from seed to cup, recording the red cherries and acidity of this highland.">一座关于云南咖啡的非官方科普站。以产区地理为骨架，从种子到杯子为叙事线，记录这片高原上的红果与酸质。</p>
       </div>
 
       <div>
-        <h5>探索</h5>
+        <h5 data-en="Explore">探索</h5>
         <ul>
-          <li><a href="#terroir">产区与风土</a></li>
-          <li><a href="#varieties">品种与加工</a></li>
-          <li><a href="#culture">咖啡文化</a></li>
+          <li><a href="#terroir" data-en="Terroir">产区与风土</a></li>
+          <li><a href="#varieties" data-en="Varieties &amp; Processing">品种与加工</a></li>
+          <li><a href="#culture" data-en="Culture">咖啡文化</a></li>
         </ul>
       </div>
 
       <div>
-        <h5>品牌</h5>
+        <h5 data-en="Brands">品牌</h5>
         <ul>
-          <li><a href="#brands">速溶 / 冻干类</a></li>
-          <li><a href="#brands">挂耳 / 咖啡液类</a></li>
-          <li><a href="#brands">烘焙豆类</a></li>
-          <li><a href="#brands">连锁门店 / 现制</a></li>
+          <li><a href="#brands" data-en="Instant / Freeze-dried">速溶 / 冻干类</a></li>
+          <li><a href="#brands" data-en="Drip / Concentrate">挂耳 / 咖啡液类</a></li>
+          <li><a href="#brands" data-en="Roasted Beans">烘焙豆类</a></li>
+          <li><a href="#brands" data-en="Chain Cafés">连锁门店 / 现制</a></li>
         </ul>
       </div>
 
       <div>
-        <h5>参与</h5>
+        <h5 data-en="Engage">参与</h5>
         <ul>
-          <li><a href="#about">关于本站</a></li>
-          <li><a href="#culture">各地咖啡节</a></li>
+          <li><a href="#about" data-en="About this site">关于本站</a></li>
+          <li><a href="#culture" data-en="Local coffee festivals">各地咖啡节</a></li>
         </ul>
         <div class="mailbox" data-mail="imuse@163.com">
           <button class="mailbtn" type="button" data-copy-mail aria-label="复制邮箱 imuse@163.com">
             <span class="mailbtn__row">
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><rect x="1.5" y="3.5" width="13" height="9" rx="1.6" stroke="currentColor" stroke-width="1.4"/><path d="M2 4.5l6 4.2 6-4.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-              内容纠错 / 联系
+              <span data-en="Corrections / Contact">内容纠错 / 联系</span>
             </span>
             <span class="mailbtn__addr">imuse@163.com</span>
           </button>
           <span class="mailbox__status">
-            <span class="mailbox__hint">点击邮箱可复制</span>
-            <span class="mailbox__tip" role="status" aria-live="polite">邮箱已复制</span>
+            <span class="mailbox__hint" data-en="Click to copy">点击邮箱可复制</span>
+            <span class="mailbox__tip" role="status" aria-live="polite" data-en="Email copied">邮箱已复制</span>
           </span>
         </div>
       </div>
     </div>
 
-    <p class="footer__note">本站为<strong>非商业、非官方</strong>的纯信息展示与科普站点，与文中提及的任何品牌、企业及机构均无隶属或授权关系。所有数据来自公开渠道整理，仅作参考，不构成投资或采购建议；如发现内容有误，欢迎通过上方邮箱指正。</p>
+    <p class="footer__note" data-en-html="This site is a <strong>non-commercial, unofficial</strong> pure-info and educational site, with no affiliation or authorization with any brand, company or institution mentioned herein. All data are compiled from public sources for reference only and do not constitute investment or purchasing advice; if you spot an error, please reach out via the email above.">本站为<strong>非商业、非官方</strong>的纯信息展示与科普站点，与文中提及的任何品牌、企业及机构均无隶属或授权关系。所有数据来自公开渠道整理，仅作参考，不构成投资或采购建议；如发现内容有误，欢迎通过上方邮箱指正。</p>
 
     <div class="footer__bottom">
       <span class="footer__domain">ynkf.net</span>
-      <span>© <span id="year">2026</span> 云南咖啡</span>
+      <span data-en-html="© <span id=&quot;year&quot;>2026</span> Yunnan Coffee">© <span id="year">2026</span> 云南咖啡</span>
     </div>
   </div>
 </footer>
@@ -952,6 +955,7 @@
   <svg width="17" height="17" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M3.5 7.5L8 3l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
 </button>
 
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/site.js"></script>
 <script src="assets/js/brands-data.js"></script>
 <script src="assets/js/brands.js"></script>
